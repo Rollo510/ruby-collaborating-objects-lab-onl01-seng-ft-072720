@@ -9,9 +9,8 @@ def initialize(name)
   @@all << self
 end  
 
-def artist_name=(artist_name)
-  
-  
+def artist_name=(name)
+  self.find_or_create_by_name(name)
 end
 
 def self.all
@@ -19,10 +18,16 @@ def self.all
 end
 
 def self.new_by_filename(file_name)
-
+  
 end
 
-
+def self.find_or_create_by_name(name)
+  if self.find(name)
+    self.find(name)
+  else
+    self.new(name)
+  end
+end
 
 
 
