@@ -24,6 +24,4 @@ def self.new_by_filename(filename)
   song
 end
 
-
-
 end
