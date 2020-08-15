@@ -9,7 +9,8 @@ def initialize(name)
   @@all << self
 end  
 
-def artist_name=(artist)
+def artist_name=(artist_name)
+  
   
 end
 
